@@ -18,14 +18,19 @@ read kiht
 kpikkus=$(( pikkus / ksuurus ))
 klaius=$(( laius / ksuurus ))
 
-kupsiseid_kihis=$(( kpikkus * klaius))
+kupsiseid_kihis=$(expr  "$kpikkus" \* "$klaius")
 
 #kogu tordi küpsiste arv
 
-kupsiseid_kokku=$(( kupsiseid_kihis * kiht))
+kupsiseid_kokku=$(expr "$kupsiseid_kihis" \* "$kiht")
 
 #Vajalike pakkide arv
 
-pakk=$(( (kupsiseid_kokku + kogus -1) / kogus ))
+pakk=$(expr "$kupsiseid_kokku" / "$kogus")
+jaak=$(expr "$kupsiseid_kokku" % "$kogus")
+
+if [ "$jaak" -gt 0 ]; then
+	pakk=$(expr "$pakk" + 1)
+fi
 
 echo "Pakkide arv, mis tuleb osta: $pakk"
