@@ -19,4 +19,5 @@ fi
 if [ -s $path ]
 then
         echo "Ja see ei ole tühi!"
+	echo "" > $path
 fi
