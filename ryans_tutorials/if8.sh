@@ -6,9 +6,9 @@ then
 	echo "Asi $path eksistreerib!"
 fi
 
-if [ -d $path ]
+if [ ! -d $path ]
 then
-        echo "ja ta on kataloog!"
+        echo "ja ta ei ole kataloog! Ehk ta on fail!"
 fi
 
 if [ -r $path ]
