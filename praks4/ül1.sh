@@ -6,13 +6,19 @@
 #read arv
 
 #ei küsi kasutaja käest arvu, skripti käivitamisel anname arvu argumendina
-arv=$1
-
-jaak=$(( $arv % 2))
-
-if [ $jaak -eq 0 ]
+if [ $# -eq 0 ]
 then
-	echo "Antud arv $arv on PAARIS"
+	echo "See skript tuleb käivitada koos argumendiga! (Näide: $0 44) "
 else
-	echo "Antud arv $arv on PAARITU"
+
+	arv=$1
+
+	jaak=$(( $arv % 2))
+
+	if [ $jaak -eq 0 ]
+	then
+		echo "Antud arv $arv on PAARIS"
+	else
+		echo "Antud arv $arv on PAARITU"
+	fi
 fi
