@@ -15,5 +15,5 @@ bussid=$(expr "$reisijad" / "$kohad")
 
 maha_jaanud=$(expr "$reisijad" % "$kohad")
 
-echo  "Täitunud busse on: $bussid"
+echo "Täitunud busse on: $bussid"
 echo "Maha jäänud reisijaid on: $maha_jaanud"
