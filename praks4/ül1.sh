@@ -2,9 +2,11 @@
 
 ## skirpt kontrollib kas arv on paaris või paaritu
 
-echo -n "Sisesta arv mida on vaja kontrollida: "
-read arv
+#echo -n "Sisesta arv mida on vaja kontrollida: "
+#read arv
 
+#ei küsi kasutaja käest arvu, skripti käivitamisel anname arvu argumendina
+arv=$1
 
 jaak=$(( $arv % 2))
 
