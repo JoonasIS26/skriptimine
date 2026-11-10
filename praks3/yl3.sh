@@ -9,11 +9,11 @@ read kohad
 
 #Täidetus busside arv
 
-bussid=$(expr "$reisijad" / "$kohad")
+bussid=$(( $reisijad / $kohad))
 
 #reisijad kes ei mahu bussile
 
-maha_jaanud=$(expr "$reisijad" % "$kohad")
+maha_jaanud=$(( $reisijad % $kohad))
 
 echo "Täitunud busse on: $bussid"
 echo "Maha jäänud reisijaid on: $maha_jaanud"
