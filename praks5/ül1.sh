@@ -21,6 +21,10 @@ elif test $vanus -ge 63
 then
         echo "Oled senioor!"
 
+elif test $vanus -gt 110
+then
+	echo "Ei ole usutav vanus. Sisesta oma õige vanus"
+
 else
         echo "Vigane sisend! Kontrolli kas sisestasid numbri?"
 fi
