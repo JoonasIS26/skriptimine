@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Skript küsib kasutaja vanust ning väljastab sisendi põhjal vastava vastuse.
+
 echo -n "Sisesta oma vanus: "
 read vanus
 
