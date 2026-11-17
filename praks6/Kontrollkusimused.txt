@@ -1,0 +1,34 @@
+1. Milline on for-tsükli põhisüntaks Bashis?
+for var in list; do
+    käsk
+done
+
+
+2. Mis vahe on lihtsate väärtuste ja jutumärkides väärtuste vahel tsüklis?
+Lihtne väärtus on tavaliselt üks sõna. Jutumärkides väärtuseid kasutatakse siis kui üks väärtus on eraltatud tühikuga näiteks, väärtuseks on Tere Maailm, kui jutumärke ei oleks siis programm loeks neid eraldi väärtustena. 
+
+3. Mida teeb käsu asendamine (command substitution) tsüklis? Too näide.
+Väärtuste loend on asendatud mingi käsu väljundiga.
+Näide:
+
+for user in $(cut -d: -f1 /etc/passwd); do
+    echo "Kasutaja: $user"
+done
+
+
+4. Milleks kasutatakse muutujat IFS?
+Määrab, milliste sümbolite abil string jaotatakse eraldi osadeks.
+
+5. Miks ei ole soovitatav kasutada for file in $(ls)? Mis on parem lahendus?
+Võib nimedes tühikute tõttu vigu teha. Kasutada mustrit *.txt või find.
+
+6. Kuidas näeb välja C-stiilis for-tsükkel Bashis?
+for (( i=1; i<=5; i++ )); do
+    echo "Loendur: $i"
+done
+
+
+7. Kuidas panna C-stiilis tsükkel lugema ainult paarisarve?
+for (( i=2; i<=10; i+=2 )); do
+    echo "Paarisarv: $i"
+done
