@@ -1,7 +1,7 @@
 #!/bin/bash
-# Ask the user for login details
+# Küsib kasutajalt sisselogimise detaile
 
-read -p 'Username: ' uservar
-read -sp 'Password: ' passvar
+read -p 'Kasutajanimi: ' uservar
+read -p 'Parool: ' passvar
 echo
-echo Thankyou $uservar we now have your login details
+echo "Kasutajanimi: $uservar ning parool on $passvar"

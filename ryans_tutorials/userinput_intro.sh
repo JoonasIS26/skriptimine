@@ -1,8 +1,8 @@
 #!/bin/bash
 # Ask the user for their name
 
-echo Hello, who am I talking to?
+echo "Tere!"
+echo -n "Sisesta nimi: "
+read nimi
 
-read varname
-
-echo It\'s nice to meet you $varname
+echo "Tere $nimi!"
